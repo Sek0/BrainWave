@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="module_jgraph" default="compile.module.jgraph">
+  <dirname property="module.jgraph.basedir" file="${ant.file.module_jgraph}"/>
+  
+  <property name="module.jdk.home.jgraph" value="${jdk.home.android_api_23_platform}"/>
+  <property name="module.jdk.bin.jgraph" value="${jdk.bin.android_api_23_platform}"/>
+  <property name="module.jdk.classpath.jgraph" value="jdk.classpath.android_api_23_platform"/>
+  
+  <property name="compiler.args.jgraph" value="-encoding UTF-8 -source 1.7 -target 1.7 ${compiler.args}"/>
+  
+  <property name="jgraph.output.dir" value="${module.jgraph.basedir}/build/intermediates/classes/debug"/>
+  <property name="jgraph.testoutput.dir" value="${module.jgraph.basedir}/build/intermediates/classes/test/debug"/>
+  
+  <path id="jgraph.module.bootclasspath">
+    <!-- Paths to be included in compilation bootclasspath -->
+  </path>
+  
+  <path id="jgraph.module.production.classpath">
+    <path refid="${module.jdk.classpath.jgraph}"/>
+    <path refid="library.support-annotations-23.4.0.classpath"/>
+    <path refid="library.animated-vector-drawable-23.4.0.classpath"/>
+    <path refid="library.support-v4-23.4.0.classpath"/>
+    <path refid="library.support-vector-drawable-23.4.0.classpath"/>
+    <path refid="library.appcompat-v7-23.4.0.classpath"/>
+  </path>
+  
+  <path id="jgraph.runtime.production.module.classpath">
+    <pathelement location="${jgraph.output.dir}"/>
+    <path refid="library.support-annotations-23.4.0.classpath"/>
+    <path refid="library.animated-vector-drawable-23.4.0.classpath"/>
+    <path refid="library.support-v4-23.4.0.classpath"/>
+    <path refid="library.support-vector-drawable-23.4.0.classpath"/>
+    <path refid="library.appcompat-v7-23.4.0.classpath"/>
+  </path>
+  
+  <path id="jgraph.module.classpath">
+    <path refid="${module.jdk.classpath.jgraph}"/>
+    <pathelement location="${jgraph.output.dir}"/>
+    <path refid="library.espresso-core-2.2.2.classpath"/>
+    <path refid="library.support-annotations-23.4.0.classpath"/>
+    <path refid="library.runner-0.5.classpath"/>
+    <path refid="library.exposed-instrumentation-api-publish-0.5.classpath"/>
+    <path refid="library.espresso-idling-resource-2.2.2.classpath"/>
+    <path refid="library.rules-0.5.classpath"/>
+    <path refid="library.hamcrest-library-1.3.classpath"/>
+    <path refid="library.javax.annotation-api-1.2.classpath"/>
+    <path refid="library.javax.inject-1.classpath"/>
+    <path refid="library.hamcrest-integration-1.3.classpath"/>
+    <path refid="library.animated-vector-drawable-23.4.0.classpath"/>
+    <path refid="library.javawriter-2.1.1.classpath"/>
+    <path refid="library.hamcrest-core-1.3.classpath"/>
+    <path refid="library.support-v4-23.4.0.classpath"/>
+    <path refid="library.junit-4.12.classpath"/>
+    <path refid="library.support-vector-drawable-23.4.0.classpath"/>
+    <path refid="library.jsr305-2.0.1.classpath"/>
+    <path refid="library.appcompat-v7-23.4.0.classpath"/>
+  </path>
+  
+  <path id="jgraph.runtime.module.classpath">
+    <pathelement location="${jgraph.testoutput.dir}"/>
+    <pathelement location="${jgraph.output.dir}"/>
+    <path refid="library.espresso-core-2.2.2.classpath"/>
+    <path refid="library.support-annotations-23.4.0.classpath"/>
+    <path refid="library.runner-0.5.classpath"/>
+    <path refid="library.exposed-instrumentation-api-publish-0.5.classpath"/>
+    <path refid="library.espresso-idling-resource-2.2.2.classpath"/>
+    <path refid="library.rules-0.5.classpath"/>
+    <path refid="library.hamcrest-library-1.3.classpath"/>
+    <path refid="library.javax.annotation-api-1.2.classpath"/>
+    <path refid="library.javax.inject-1.classpath"/>
+    <path refid="library.hamcrest-integration-1.3.classpath"/>
+    <path refid="library.animated-vector-drawable-23.4.0.classpath"/>
+    <path refid="library.javawriter-2.1.1.classpath"/>
+    <path refid="library.hamcrest-core-1.3.classpath"/>
+    <path refid="library.support-v4-23.4.0.classpath"/>
+    <path refid="library.junit-4.12.classpath"/>
+    <path refid="library.support-vector-drawable-23.4.0.classpath"/>
+    <path refid="library.jsr305-2.0.1.classpath"/>
+    <path refid="library.appcompat-v7-23.4.0.classpath"/>
+  </path>
+  
+  
+  <patternset id="excluded.from.module.jgraph">
+    <patternset refid="ignored.files"/>
+  </patternset>
+  
+  <patternset id="excluded.from.compilation.jgraph">
+    <patternset refid="compiler.excluded"/>
+    <patternset refid="excluded.from.module.jgraph"/>
+  </patternset>
+  
+  <path id="jgraph.module.sourcepath">
+    <dirset dir="${module.jgraph.basedir}">
+      <include name="build/generated/source/r/debug"/>
+      <include name="build/generated/source/aidl/debug"/>
+      <include name="build/generated/source/buildConfig/debug"/>
+      <include name="build/generated/source/apt/debug"/>
+      <include name="src/main/res"/>
+      <include name="src/main/java"/>
+    </dirset>
+  </path>
+  
+  <path id="jgraph.module.test.sourcepath">
+    <dirset dir="${module.jgraph.basedir}">
+      <include name="build/generated/source/r/androidTest/debug"/>
+      <include name="build/generated/source/aidl/androidTest/debug"/>
+      <include name="build/generated/source/buildConfig/androidTest/debug"/>
+      <include name="build/generated/source/apt/androidTest/debug"/>
+      <include name="src/androidTest/java"/>
+    </dirset>
+  </path>
+  
+  
+  <target name="compile.module.jgraph" depends="compile.module.jgraph.production,compile.module.jgraph.tests" description="Compile module jgraph"/>
+  
+  <target name="compile.module.jgraph.production" depends="register.custom.compilers" description="Compile module jgraph; production classes">
+    <mkdir dir="${jgraph.output.dir}"/>
+    <javac2 destdir="${jgraph.output.dir}" debug="${compiler.debug}" nowarn="${compiler.generate.no.warnings}" memorymaximumsize="${compiler.max.memory}" fork="true" executable="${module.jdk.bin.jgraph}/javac">
+      <compilerarg line="${compiler.args.jgraph}"/>
+      <bootclasspath refid="jgraph.module.bootclasspath"/>
+      <classpath refid="jgraph.module.production.classpath"/>
+      <src refid="jgraph.module.sourcepath"/>
+      <patternset refid="excluded.from.compilation.jgraph"/>
+    </javac2>
+    
+    <copy todir="${jgraph.output.dir}">
+      <fileset dir="${module.jgraph.basedir}/build/generated/source/r/debug">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+        <patternset refid="excluded.from.compilation.jgraph"/>
+      </fileset>
+      <fileset dir="${module.jgraph.basedir}/build/generated/source/aidl/debug">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+        <patternset refid="excluded.from.compilation.jgraph"/>
+      </fileset>
+      <fileset dir="${module.jgraph.basedir}/build/generated/source/buildConfig/debug">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+        <patternset refid="excluded.from.compilation.jgraph"/>
+      </fileset>
+      <fileset dir="${module.jgraph.basedir}/build/generated/source/apt/debug">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+        <patternset refid="excluded.from.compilation.jgraph"/>
+      </fileset>
+      <fileset dir="${module.jgraph.basedir}/src/main/res">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+        <patternset refid="excluded.from.compilation.jgraph"/>
+      </fileset>
+      <fileset dir="${module.jgraph.basedir}/src/main/java">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+        <patternset refid="excluded.from.compilation.jgraph"/>
+      </fileset>
+    </copy>
+  </target>
+  
+  <target name="compile.module.jgraph.tests" depends="register.custom.compilers,compile.module.jgraph.production" description="compile module jgraph; test classes" unless="skip.tests">
+    <mkdir dir="${jgraph.testoutput.dir}"/>
+    <javac2 destdir="${jgraph.testoutput.dir}" debug="${compiler.debug}" nowarn="${compiler.generate.no.warnings}" memorymaximumsize="${compiler.max.memory}" fork="true" executable="${module.jdk.bin.jgraph}/javac">
+      <compilerarg line="${compiler.args.jgraph}"/>
+      <bootclasspath refid="jgraph.module.bootclasspath"/>
+      <classpath refid="jgraph.module.classpath"/>
+      <src refid="jgraph.module.test.sourcepath"/>
+      <patternset refid="excluded.from.compilation.jgraph"/>
+    </javac2>
+    
+    <copy todir="${jgraph.testoutput.dir}">
+      <fileset dir="${module.jgraph.basedir}/build/generated/source/r/androidTest/debug">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+        <patternset refid="excluded.from.compilation.jgraph"/>
+      </fileset>
+      <fileset dir="${module.jgraph.basedir}/build/generated/source/aidl/androidTest/debug">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+        <patternset refid="excluded.from.compilation.jgraph"/>
+      </fileset>
+      <fileset dir="${module.jgraph.basedir}/build/generated/source/buildConfig/androidTest/debug">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+        <patternset refid="excluded.from.compilation.jgraph"/>
+      </fileset>
+      <fileset dir="${module.jgraph.basedir}/build/generated/source/apt/androidTest/debug">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+        <patternset refid="excluded.from.compilation.jgraph"/>
+      </fileset>
+      <fileset dir="${module.jgraph.basedir}/src/androidTest/java">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+        <patternset refid="excluded.from.compilation.jgraph"/>
+      </fileset>
+    </copy>
+  </target>
+  
+  <target name="clean.module.jgraph" description="cleanup module">
+    <delete dir="${jgraph.output.dir}"/>
+    <delete dir="${jgraph.testoutput.dir}"/>
+  </target>
+</project>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#61b7a6</color>
+    <color name="colorPrimaryDark">#4c90c0</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="tab_main_text_1">#aaa</color>
+    <color name="tab_main_text_2">#74b5f7</color>
+    <color name="tab_top_text_1">#aaa</color>
+    <color name="tab_top_text_2">#000</color>
+    <color name="tab_top2_text_1">#000</color>
+    <color name="tab_top2_text_2">#fff</color>
+    <color name="white">#fff</color>
+    <color name="colorWhite">#ffffff</color>
+    <color name="colorGray">#c7c1c1</color>
+    <color name="colorBlack">#202021</color>
+    <color name="colorRed">#fa7e44</color>
+    <color name="colorBlue">#4c90c0</color>
+    <color name="AppThemeColor">#61b7a6</color>
+    <color name="test">#f2efec</color>
+    <color name="subject">#dfdfde</color>
+    <color name="question">#b9b9b9</color>
+    <color name="tongji">#74c1b2</color>
+
+
+
+
+    <color name="material_login_login_color">#ffffff</color>
+    <color name="material_login_register_color">#68686e</color>
+    <color name="material_login_login_error_color">#ffbebe</color>
+    <color name="material_login_register_error_color">#600002</color>
+
+</resources>

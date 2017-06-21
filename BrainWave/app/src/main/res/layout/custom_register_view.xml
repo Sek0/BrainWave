@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<shem.com.materiallogin.DefaultRegisterView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/login"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:registerActionText="注册"
+    app:registerHint="用户名"
+    app:registerIcon="@drawable/ic_person_add_white_24dp"
+    app:registerPasswordHint="密码"
+    app:registerRepeatPasswordHint="验证密码"
+    app:registerTextColor="@color/material_login_login_color"
+    app:registerTitle="用户注册" />
